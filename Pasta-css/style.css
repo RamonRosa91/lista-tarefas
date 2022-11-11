@@ -18,10 +18,57 @@ body {
     padding: 20px 30px;
     box-shadow: 0 20px 50px;
     width: 40%;
+    min-width: 500px;
 }
 
 .incluir-tarefas {
     padding: 30px 20px;
     border-radius: 5px;
     display: flex;
+}
+
+.incluir-tarefas input {
+    flex: 3;
+    font-size: 1rem;
+    border: 2px solid #FFFFFF;
+    border-radius: 5px;
+    padding: 12px;
+    font-weight: 500;
+}
+
+.incluir-tarefas input:focus {
+    border-color: #2c2c2c;
+    outline: none;
+}
+
+.adicionar-tarefa {
+    flex: 1;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 12px;
+    height: 100%;
+    border: none;
+    margin-left: 12px;
+    background-color: #2c2c2c;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.resultado-tarefas {
+    padding: 30px 20px;
+    margin-top: 60px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+/* CSS do JavaScript */
+
+.erro {
+border: 3px solid red !important;
+}
+
+.erro::placeholder {
+    color: red;
+    font-weight: bold;
 }
