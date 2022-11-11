@@ -1,18 +1,24 @@
-const inputElemento = document.querySelector('tarefas');
-const addTarefasButton = document.querySelector('.adicionar-tarefas');
+const inputElement = document.querySelector(".tarefas-input");
+const addTaskButton = document.querySelector(".adicionar-tarefa-botao");
 
-const validarInput = () =>  inputElemento.value.trim().lenght > 0;
+const validateInput = () => inputElement.value.trim().length > 0;
 
-const apertarButtonTarefa = () => {
-    const inputValido = validarInput ();
+const handleAddTask = () => {
+    const inputIsValid = validateInput();
 
-    if (!inputValido) {
-        return inputElemento.classList.add("erro");
+    if(!inputIsValid) {
+       return inputElement.classList.add("erro");
+    }
+};
+
+const handleInputChange = () => {
+    const inputIsValid = validateInput ();
+
+    if (inputIsValid) {
+        return inputElement.classList.remove("erro");
     }
 }
 
-addTarefasButton.addEventListener ("click", () => apertarButtonTarefa())
+addTaskButton.addEventListener("click", () => handleAddTask());
 
-
-
-
+inputElement.addEventListener("change", () => handleInputChange());
