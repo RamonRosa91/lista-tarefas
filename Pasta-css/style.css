@@ -55,11 +55,29 @@ body {
     cursor: pointer;
 }
 
+.adicionar-tarefa-botao:hover {
+    transform: scale(1.1);
+}
+
 .resultado-tarefas {
     padding: 30px 20px;
     margin-top: 60px;
     border-radius: 10px;
     width: 100%;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 4px;
+}
+
+.task-item i:hover {
+   transform: scale(1.3);
+   cursor: pointer;
 }
 
 .erro {
